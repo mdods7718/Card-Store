@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="page-title">Magic: The Gathering</h2>
+<div class="hr"><hr /></div>
+
+<div class="row">
+    <div class="col-md-4 product text-center">
+        <h3 class="title"><a href=#>@ViewBag.Magic.Name</a></h3>
+        <div class="card-image"><img src="@ViewBag.Magic.ImagePath" /></div>
+        <br />
+        <div class="price">
+            $ @ViewBag.Magic.MarketPrice
+        </div>
+        <div class="rarety">
+            Rarety:
+            @ViewBag.Magic.Rarety
+        </div>
+        <a class="add-to-cart" href=""></a>
+    </div>
+    <div class="col-md-4 product text-center">
+        <h3 class="title"><a href=#>@ViewBag.Magic2.Name</a></h3>
+        <div class="card-image"><img src="@ViewBag.Magic2.ImagePath" /></div>
+        <br />
+        <div class="price">
+            $ @ViewBag.Magic2.MarketPrice
+        </div>
+        <div class="rarety">
+            Rarety:
+            @ViewBag.Magic2.Rarety
+        </div>
+        <a class="add-to-cart" href=""></a>
+    </div>
+    <div class="col-md-4 product text-center">
+        <h3 class="title"><a href=#>@ViewBag.Magic3.Name</a></h3>
+        <div class="card-image"><img src="@ViewBag.Magic3.ImagePath" /></div>
+        <br />
+        <div class="price">
+            $ @ViewBag.Magic3.MarketPrice
+        </div>
+        <div class="rarety">
+            Rarety:
+            @ViewBag.Magic3.Rarety
+        </div>
+        <a class="add-to-cart" href=""></a>
+    </div>
+</div>
