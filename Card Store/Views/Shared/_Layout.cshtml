@@ -26,7 +26,6 @@
                     <li>@Html.ActionLink("Magic", "Index", "Magic")</li>
                     <li>@Html.ActionLink("Yu-Gi-Oh!", "Index", "Yugioh")</li>
                     <li>@Html.ActionLink("Pokemon", "Index", "Pokemon")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -43,7 +42,7 @@
                 <li>@Html.ActionLink("About", "About", "Home")</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li>&copy; @DateTime.Now.Year - Card Store</li>
+                <li class="copyright">&copy; @DateTime.Now.Year - Card Store</li>
             </ul>
         </footer>
     </div>

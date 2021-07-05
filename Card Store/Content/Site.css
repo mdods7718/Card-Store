@@ -5,8 +5,7 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -58,6 +57,8 @@ hr {
     max-height: 390px;
 }
 
+/*navbar*/
+
 .footer-navbar a{
     color: black;
 }
@@ -83,4 +84,46 @@ hr {
 
 .navbar-toggle .icon-bar{
     background-color: white;
+}
+
+.copyright{
+    padding-right: 15px;
+}
+
+/* Hero area */
+
+.hero-image {
+    background-image: url("Images/magicHero.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 500px;
+    width: 100%;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text h1 {
+    color: #3ac692;
+    font-weight: 600;
+}
+
+.hero-text p{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.hero-text button {
+    background-color: #3ac692;
+    border-radius: 12px;
+    font-size: 18px;
+    color: black;
 }

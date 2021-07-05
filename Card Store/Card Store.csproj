@@ -197,6 +197,7 @@
     <Content Include="Content\Images\knightmarePhoenix.jpg" />
     <Content Include="Content\Images\levelBall.jpg" />
     <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\magicHero.jpg" />
     <Content Include="Content\Images\melony.jpg" />
     <Content Include="Content\Images\mistvault-bridge.jpg" />
     <Content Include="Content\Images\obeliskTheTormentor.jpg" />
