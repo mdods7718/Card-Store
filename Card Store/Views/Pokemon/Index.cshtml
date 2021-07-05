@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Card_Store.Models.Magic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pokemon</h2>
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.quickBall.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.quickBall.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.quickBall.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.quickBall.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.pathToThePeak.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.pathToThePeak.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.pathToThePeak.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.pathToThePeak.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.fogCrystal.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.fogCrystal.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.fogCrystal.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.fogCrystal.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.bossOrders.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.bossOrders.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.bossOrders.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.bossOrders.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.levelBall.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.levelBall.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.levelBall.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.levelBall.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.melony.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.melony.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.melony.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.melony.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+    </div>
+
+</div>
+
+

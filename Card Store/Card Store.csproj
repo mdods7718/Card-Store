@@ -171,6 +171,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MagicController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PokemonController.cs" />
+    <Compile Include="Controllers\YugiohController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,6 +180,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Magic.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Pokemon.cs" />
+    <Compile Include="Models\Yugioh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -186,10 +190,24 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\bossOrders.jpg" />
     <Content Include="Content\Images\DragonsRageChanneler.jpg" />
     <Content Include="Content\Images\FeastingTrollKing.jpg" />
+    <Content Include="Content\Images\fogCrystal.jpg" />
+    <Content Include="Content\Images\knightmarePhoenix.jpg" />
+    <Content Include="Content\Images\levelBall.jpg" />
+    <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\melony.jpg" />
     <Content Include="Content\Images\mistvault-bridge.jpg" />
+    <Content Include="Content\Images\obeliskTheTormentor.jpg" />
+    <Content Include="Content\Images\pathToThePeak.jpg" />
+    <Content Include="Content\Images\quickBall.jpg" />
     <Content Include="Content\Images\SilverbluffBridge.jpg" />
+    <Content Include="Content\Images\skullMeister.jpg" />
+    <Content Include="Content\Images\sliferTheSkyDragon.jpg" />
+    <Content Include="Content\Images\snakeRain.jpg" />
+    <Content Include="Content\Images\soulCrossing.jpg" />
+    <Content Include="Content\Images\swapFrog.jpg" />
     <Content Include="Content\Images\tireless-provisioner.jpg" />
     <Content Include="Content\Images\unholy-heat.jpg" />
     <Content Include="favicon.ico" />
@@ -248,6 +266,12 @@
     <Content Include="Views\Magic\Delete.cshtml" />
     <Content Include="Views\Magic\Details.cshtml" />
     <Content Include="Views\Magic\Edit.cshtml" />
+    <Content Include="Views\Yugioh\Create.cshtml" />
+    <Content Include="Views\Yugioh\Delete.cshtml" />
+    <Content Include="Views\Yugioh\Details.cshtml" />
+    <Content Include="Views\Yugioh\Edit.cshtml" />
+    <Content Include="Views\Yugioh\Index.cshtml" />
+    <Content Include="Views\Pokemon\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

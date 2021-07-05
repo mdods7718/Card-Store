@@ -9,59 +9,57 @@ using System.Web.Mvc;
 using Card_Store.Models;
 
 namespace Card_Store.Controllers
-
-{   
-    public class MagicController : Controller
+{
+    public class YugiohController : Controller
     {
-        private MagicDBContext db = new MagicDBContext();
+        private YugiohDBContext db = new YugiohDBContext();
 
-        // GET: Magic
+        // GET: Yugioh
         public ActionResult Index()
         {
             return View(db.Magic.ToList());
         }
 
-        // GET: Magic/Details/5
+        // GET: Yugioh/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Magic magic = db.Magic.Find(id);
-            if (magic == null)
+            Yugioh yugioh = db.Magic.Find(id);
+            if (yugioh == null)
             {
                 return HttpNotFound();
             }
-            return View(magic);
+            return View(yugioh);
         }
 
-        // GET: Magic/Create
+        // GET: Yugioh/Create
         [Authorize(Users = "Admin")]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Magic/Create
+        // POST: Yugioh/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Users = "Admin")]
-        public ActionResult Create([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Magic magic)
+        public ActionResult Create([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Yugioh yugioh)
         {
             if (ModelState.IsValid)
             {
-                db.Magic.Add(magic);
+                db.Magic.Add(yugioh);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(magic);
+            return View(yugioh);
         }
 
-        // GET: Magic/Edit/5
+        // GET: Yugioh/Edit/5
         [Authorize(Users = "Admin")]
         public ActionResult Edit(string id)
         {
@@ -69,32 +67,32 @@ namespace Card_Store.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Magic magic = db.Magic.Find(id);
-            if (magic == null)
+            Yugioh yugioh = db.Magic.Find(id);
+            if (yugioh == null)
             {
                 return HttpNotFound();
             }
-            return View(magic);
+            return View(yugioh);
         }
 
-        // POST: Magic/Edit/5
+        // POST: Yugioh/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Users = "Admin")]
-        public ActionResult Edit([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Magic magic)
+        public ActionResult Edit([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Yugioh yugioh)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(magic).State = EntityState.Modified;
+                db.Entry(yugioh).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(magic);
+            return View(yugioh);
         }
 
-        // GET: Magic/Delete/5
+        // GET: Yugioh/Delete/5
         [Authorize(Users = "Admin")]
         public ActionResult Delete(string id)
         {
@@ -102,22 +100,22 @@ namespace Card_Store.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Magic magic = db.Magic.Find(id);
-            if (magic == null)
+            Yugioh yugioh = db.Magic.Find(id);
+            if (yugioh == null)
             {
                 return HttpNotFound();
             }
-            return View(magic);
+            return View(yugioh);
         }
 
-        // POST: Magic/Delete/5
+        // POST: Yugioh/Delete/5
         [Authorize(Users = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Magic magic = db.Magic.Find(id);
-            db.Magic.Remove(magic);
+            Yugioh yugioh = db.Magic.Find(id);
+            db.Magic.Remove(yugioh);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

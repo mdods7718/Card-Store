@@ -52,3 +52,35 @@ hr {
 .price {
     font-weight: bold;
 }
+
+.product{
+    max-width: 390px;
+    max-height: 390px;
+}
+
+.footer-navbar a{
+    color: black;
+}
+
+.navbar-fixed-top{
+    background-color: black;
+}
+
+.navbar-fixed-top a {
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+ }
+
+.navbar-fixed-top a:hover{
+    color: grey;
+}
+
+.navbar-fixed-top li a:focus,
+.navbar-fixed-top li a:hover {
+    background-color: black;
+}
+
+.navbar-toggle .icon-bar{
+    background-color: white;
+}
