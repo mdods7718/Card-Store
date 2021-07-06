@@ -7,28 +7,98 @@
 <h2>Yu-Gi-Oh!</h2>
 
 
-
 <div class="container">
 
     <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 product text-center">
-                <h3 class="title"><a href=#>@Html.DisplayFor(modelItem => item.Name)</a></h3>
-                <div class="card-image"><img src="@Html.DisplayFor(modelItem => item.ImagePath)" /></div>
-                <br />
-                <div class="price">
-                    $ @Html.DisplayFor(modelItem => item.MarketPrice)
-                </div>
-                <div class="rarety">
-                    Rarety:
-                    @Html.DisplayFor(modelItem => item.Rarety)
-                </div>
-                <a class="add-to-cart" href=""></a>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.obeliskTheTormentor.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.obeliskTheTormentor.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.obeliskTheTormentor.MarketPrice
             </div>
-        }
+            <div class="rarety">
+                Rarety:
+                @ViewBag.obeliskTheTormentor.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
         </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.sliferTheSkyDragon.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.sliferTheSkyDragon.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.sliferTheSkyDragon.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.sliferTheSkyDragon.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.knightmarePhoenix.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.knightmarePhoenix.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.knightmarePhoenix.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.knightmarePhoenix.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.soulCrossing.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.soulCrossing.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.soulCrossing.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.soulCrossing.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.skullMeister.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.skullMeister.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.skullMeister.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.skullMeister.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.swapFrog.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.swapFrog.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.swapFrog.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.swapFrog.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+    </div>
+
 </div>
+
+
+
+
+
+
 
 
 

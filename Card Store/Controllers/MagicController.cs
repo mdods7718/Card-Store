@@ -13,122 +13,57 @@ namespace Card_Store.Controllers
 {   
     public class MagicController : Controller
     {
-        private MagicDBContext db = new MagicDBContext();
-
-        // GET: Magic
         public ActionResult Index()
         {
-            return View(db.Magic.ToList());
-        }
-
-        // GET: Magic/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
+            ViewBag.dragonsRageChanneler = new Pokemon
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Magic magic = db.Magic.Find(id);
-            if (magic == null)
-            {
-                return HttpNotFound();
-            }
-            return View(magic);
-        }
+                Name = "Dragon's Rage Channeler",
+                Rarety = "Uncommon",
+                MarketPrice = 0.69,
+                ImagePath = "/Content/Images/dragonsRageChanneler.jpg"
+            };
 
-        // GET: Magic/Create
-        [Authorize(Users = "Admin")]
-        public ActionResult Create()
-        {
+            ViewBag.unholyHeat = new Pokemon
+            {
+                Name = "Unholy Heat",
+                Rarety = "Common",
+                MarketPrice = 0.26,
+                ImagePath = "/Content/Images/unholy-heat.jpg"
+            };
+
+            ViewBag.tirelessProvisioner = new Pokemon
+            {
+                Name = "Tireless Provisioner",
+                Rarety = "Uncommon",
+                MarketPrice = 0.25,
+                ImagePath = "/Content/Images/tireless-provisioner.jpg"
+            };
+
+            ViewBag.silverbluffBridge = new Pokemon
+            {
+                Name = "Silverbluff Bridge",
+                Rarety = "Common",
+                MarketPrice = 0.46,
+                ImagePath = "/Content/Images/SilverbluffBridge.jpg"
+            };
+
+            ViewBag.mistvaultBridge = new Pokemon
+            {
+                Name = "Mistvault Bridge",
+                Rarety = "Uncommon",
+                MarketPrice = 0.42,
+                ImagePath = "/Content/Images/mistvault-bridge.jpg"
+            };
+
+            ViewBag.feastingTrollKing = new Pokemon
+            {
+                Name = "Feasting Troll King",
+                Rarety = "Rare",
+                MarketPrice = 0.20,
+                ImagePath = "/Content/Images/FeastingTrollKing.jpg"
+            };
+
             return View();
-        }
-
-        // POST: Magic/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Users = "Admin")]
-        public ActionResult Create([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Magic magic)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Magic.Add(magic);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(magic);
-        }
-
-        // GET: Magic/Edit/5
-        [Authorize(Users = "Admin")]
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Magic magic = db.Magic.Find(id);
-            if (magic == null)
-            {
-                return HttpNotFound();
-            }
-            return View(magic);
-        }
-
-        // POST: Magic/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Users = "Admin")]
-        public ActionResult Edit([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Magic magic)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(magic).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(magic);
-        }
-
-        // GET: Magic/Delete/5
-        [Authorize(Users = "Admin")]
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Magic magic = db.Magic.Find(id);
-            if (magic == null)
-            {
-                return HttpNotFound();
-            }
-            return View(magic);
-        }
-
-        // POST: Magic/Delete/5
-        [Authorize(Users = "Admin")]
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            Magic magic = db.Magic.Find(id);
-            db.Magic.Remove(magic);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

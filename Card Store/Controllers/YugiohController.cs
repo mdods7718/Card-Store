@@ -12,121 +12,57 @@ namespace Card_Store.Controllers
 {
     public class YugiohController : Controller
     {
-        private YugiohDBContext db = new YugiohDBContext();
-
-        // GET: Yugioh
         public ActionResult Index()
         {
-            return View(db.Magic.ToList());
-        }
-
-        // GET: Yugioh/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
+            ViewBag.obeliskTheTormentor = new Pokemon
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Yugioh yugioh = db.Magic.Find(id);
-            if (yugioh == null)
-            {
-                return HttpNotFound();
-            }
-            return View(yugioh);
-        }
+                Name = "Obelisk the Tormentor",
+                Rarety = "Ultra Rare",
+                MarketPrice = 1.21,
+                ImagePath = "/Content/Images/obeliskTheTormentor.jpg"
+            };
 
-        // GET: Yugioh/Create
-        [Authorize(Users = "Admin")]
-        public ActionResult Create()
-        {
+            ViewBag.sliferTheSkyDragon = new Pokemon
+            {
+                Name = "Slifer the Sky Dragon",
+                Rarety = "Ultra Rare",
+                MarketPrice = 1.14,
+                ImagePath = "/Content/Images/sliferTheSkyDragon.jpg"
+            };
+
+            ViewBag.knightmarePhoenix = new Pokemon
+            {
+                Name = "Knightmare Phoenix",
+                Rarety = "Rare",
+                MarketPrice = 0.57,
+                ImagePath = "/Content/Images/knightmarePhoenix.jpg"
+            };
+
+            ViewBag.soulCrossing = new Pokemon
+            {
+                Name = "Soul Crossing",
+                Rarety = "Ultra Rare",
+                MarketPrice = 1.19,
+                ImagePath = "/Content/Images/soulCrossing.jpg"
+            };
+
+            ViewBag.skullMeister = new Pokemon
+            {
+                Name = "Skull Meister",
+                Rarety = "Rare",
+                MarketPrice = 0.81,
+                ImagePath = "/Content/Images/skullMeister.jpg"
+            };
+
+            ViewBag.swapFrog = new Pokemon
+            {
+                Name = "Swap Frog",
+                Rarety = "Ultra Rare",
+                MarketPrice = 1.99,
+                ImagePath = "/Content/Images/swapFrog.jpg"
+            };
+
             return View();
-        }
-
-        // POST: Yugioh/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Yugioh yugioh)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Magic.Add(yugioh);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(yugioh);
-        }
-
-        // GET: Yugioh/Edit/5
-        [Authorize(Users = "Admin")]
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Yugioh yugioh = db.Magic.Find(id);
-            if (yugioh == null)
-            {
-                return HttpNotFound();
-            }
-            return View(yugioh);
-        }
-
-        // POST: Yugioh/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Users = "Admin")]
-        public ActionResult Edit([Bind(Include = "Name,Rarety,MarketPrice,ImagePath")] Yugioh yugioh)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(yugioh).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(yugioh);
-        }
-
-        // GET: Yugioh/Delete/5
-        [Authorize(Users = "Admin")]
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Yugioh yugioh = db.Magic.Find(id);
-            if (yugioh == null)
-            {
-                return HttpNotFound();
-            }
-            return View(yugioh);
-        }
-
-        // POST: Yugioh/Delete/5
-        [Authorize(Users = "Admin")]
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            Yugioh yugioh = db.Magic.Find(id);
-            db.Magic.Remove(yugioh);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

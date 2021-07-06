@@ -7,27 +7,94 @@
 <h2>Magic: The Gathering</h2>
 
 
-    
 <div class="container">
 
     <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 product text-center">
-                <h3 class="title"><a href=#>@Html.DisplayFor(modelItem => item.Name)</a></h3>
-                <div class="card-image"><img src="@Html.DisplayFor(modelItem => item.ImagePath)" /></div>
-                <br />
-                <div class="price">
-                    $ @Html.DisplayFor(modelItem => item.MarketPrice)
-                </div>
-                <div class="rarety">
-                    Rarety:
-                    @Html.DisplayFor(modelItem => item.Rarety)
-                </div>
-                <a class="add-to-cart" href=""></a>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.dragonsRageChanneler.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.dragonsRageChanneler.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.dragonsRageChanneler.MarketPrice
             </div>
-        }
+            <div class="rarety">
+                Rarety:
+                @ViewBag.dragonsRageChanneler.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
         </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.unholyHeat.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.unholyHeat.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.unholyHeat.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.unholyHeat.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.feastingTrollKing.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.feastingTrollKing.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.feastingTrollKing.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.feastingTrollKing.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.tirelessProvisioner.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.tirelessProvisioner.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.tirelessProvisioner.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.tirelessProvisioner.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.silverbluffBridge.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.silverbluffBridge.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.silverbluffBridge.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.silverbluffBridge.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+        <div class="col-md-4 product text-center">
+            <h3 class="title"><a href=#>@ViewBag.mistvaultBridge.Name</a></h3>
+            <div class="card-image"><img src="@ViewBag.mistvaultBridge.ImagePath" /></div>
+            <br />
+            <div class="price">
+                $ @ViewBag.mistvaultBridge.MarketPrice
+            </div>
+            <div class="rarety">
+                Rarety:
+                @ViewBag.mistvaultBridge.Rarety
+            </div>
+            <a class="add-to-cart" href=""></a>
+        </div>
+    </div>
+
 </div>
-    
+
+
+
+
 
