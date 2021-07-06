@@ -197,11 +197,13 @@
     <Content Include="Content\Images\knightmarePhoenix.jpg" />
     <Content Include="Content\Images\levelBall.jpg" />
     <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\magicCards.jpg" />
     <Content Include="Content\Images\magicHero.jpg" />
     <Content Include="Content\Images\melony.jpg" />
     <Content Include="Content\Images\mistvault-bridge.jpg" />
     <Content Include="Content\Images\obeliskTheTormentor.jpg" />
     <Content Include="Content\Images\pathToThePeak.jpg" />
+    <Content Include="Content\Images\pokemonCards.jpg" />
     <Content Include="Content\Images\quickBall.jpg" />
     <Content Include="Content\Images\SilverbluffBridge.jpg" />
     <Content Include="Content\Images\skullMeister.jpg" />
@@ -211,6 +213,7 @@
     <Content Include="Content\Images\swapFrog.jpg" />
     <Content Include="Content\Images\tireless-provisioner.jpg" />
     <Content Include="Content\Images\unholy-heat.jpg" />
+    <Content Include="Content\Images\yugiohCardsSized.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

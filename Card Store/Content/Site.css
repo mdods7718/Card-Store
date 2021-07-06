@@ -127,3 +127,21 @@ hr {
     font-size: 18px;
     color: black;
 }
+
+/*Homepage cards*/
+
+.card-buttons {
+    background-color: #3ac692;
+    border-radius: 12px;
+    font-size: 18px;
+    color: black;
+}
+
+.card-buttons:hover{
+    background-color: black;
+    color: #3ac692;
+}
+
+.cards{
+    padding-top: 13px;
+}
